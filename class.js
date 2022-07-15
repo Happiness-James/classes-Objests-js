@@ -5,14 +5,13 @@
 // Thereafter, it allows one to calculate the total cost of the fruit by accessing the 
 // getTotalCost( ) method. 
 class KioskCalc{
-    constructor(fruit,quantity){
-        this.fruit = fruit;
-        this.quantity = quantity;
-        this.fruitsPriceList = { "orange": 30, "mango": 15, "avocado": 40 }
-        this.getTotalCost = function(){
-            return `${quantity} ${fruit} for ksh ${quantity*this.fruitsPriceList.mango}`
-    } 
+    constructor(fruitsPriceList){
+        this.fruitsPriceList = fruitsPriceList
 }
+
 }
-var kiosk = new KioskCalc("mango",5);
-console.log(kiosk.getTotalCost()) 
+let kiosk = new KioskCalc({ "orange": 30, "mango": 15, "avocado": 40 })
+KioskCalc.prototype.getTotalCost = function(fruit,quantity){
+    return `${quantity} ${fruit} for ksh ${quantity*this.fruitsPriceList.orange}`
+} 
+console.log(kiosk.getTotalCost("orange",6))
