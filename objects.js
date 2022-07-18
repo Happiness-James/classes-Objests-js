@@ -1,18 +1,18 @@
 let kiosk=[
     {
-    name :"Orange",
+    fruit :"Orange",
     price : 30,
     },
     {
-    name :"Banana",
+    fruit :"Banana",
     price : 40,
     },
     {
-    name :"Mango",
+    fruit :"Mango",
     price : 10,
     }]
-    function getTotalCost(name,quantity){
-    let m =kiosk.find(item=>item.name===name)
-    console.log(`${quantity} ${name} for Ksh ${m.price*quantity}`)
+    function getTotalCost(fruit,quantity){
+    let m =kiosk.find(item=>item.fruit===fruit)
+    console.log(`${quantity} ${fruit} for Ksh ${m.price*quantity}`)
     }
     getTotalCost("Mango",2)
