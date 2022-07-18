@@ -8,11 +8,11 @@ class KioskPrices {
     constructor(fruit, quantity){
     this.fruit = fruit
     this.quantity = quantity
-    this.fruitPriceList = {"Orange": 30, "Mango": 40, "Avocado": 20 };
+    this.fruitPriceList = {"Orange": 30, "Mango": 40, "Apple": 20 };
     this.getTotalCost = function () {
-    return ` ${quantity} ${fruit} for KES ${quantity * this.fruitPriceList[fruit]}`
+    return ` ${quantity} ${fruit} for Ksh ${quantity * this.fruitPriceList[fruit]}`
     }
     }
     }
-    var kiosk = new KioskPrices('Avocado', 2);
+    var kiosk = new KioskPrices('Apple', 2);
     console.log(kiosk.getTotalCost());
